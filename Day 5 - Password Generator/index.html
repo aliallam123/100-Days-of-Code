@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Password Generator 🔐</h1>
+    <p>Create a strong random password in seconds.</p>
+
+    <div class="password-box">
+      <input type="text" id="password" readonly placeholder="Your password..." />
+      <button id="copyBtn">Copy</button>
+    </div>
+
+    <div class="controls">
+      <label>
+        Letters
+        <input type="number" id="letters" min="0" value="8" />
+      </label>
+
+      <label>
+        Symbols
+        <input type="number" id="symbols" min="0" value="2" />
+      </label>
+
+      <label>
+        Numbers
+        <input type="number" id="numbers" min="0" value="2" />
+      </label>
+    </div>
+
+    <button class="generate-btn" id="generateBtn">Generate Password</button>
+
+    <p id="message"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
