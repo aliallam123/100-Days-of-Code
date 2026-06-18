@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reeborg Maze Runner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Reeborg-style Python practice</p>
+      <h1>Maze Runner</h1>
+    </div>
+    <p class="header-note">Follow the right wall, edit the code, and see whether the robot reaches the goal.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel maze-panel" aria-label="Maze playground">
+      <div class="panel-heading">
+        <div>
+          <h2>Random maze</h2>
+          <p id="mazeInfo">Start: (1, 1). Goal: (6, 4).</p>
+        </div>
+        <span id="runBadge" class="badge">Ready</span>
+      </div>
+
+      <div class="controls" aria-label="Simulation controls">
+        <button id="playBtn" class="primary">Play code</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="restartBtn">Restart run</button>
+        <button id="newMazeBtn">New random maze</button>
+        <label class="speed-label" for="speedSlider">
+          Speed
+          <input id="speedSlider" type="range" min="1" max="10" value="6" />
+        </label>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="mazeCanvas" aria-label="A random Reeborg maze" role="img"></canvas>
+      </div>
+
+      <p id="status" class="status">Press Play code to run the Python-like Reeborg program.</p>
+      <div class="legend" aria-label="Maze legend">
+        <span><i class="dot start"></i>Start</span>
+        <span><i class="dot goal"></i>Goal</span>
+        <span><i class="dot robot"></i>Robot</span>
+      </div>
+    </section>
+
+    <section class="panel editor-panel" aria-label="Code editor">
+      <div class="panel-heading editor-heading">
+        <div>
+          <h2>Python code</h2>
+          <p>Edit the code below, then press Play code.</p>
+        </div>
+        <button id="resetCodeBtn" class="ghost">Reset code</button>
+      </div>
+
+      <textarea id="codeEditor" spellcheck="false" aria-label="Python-like Reeborg code editor"></textarea>
+
+      <details class="help-box">
+        <summary>Supported Reeborg functions and Python features</summary>
+        <p>
+          This page runs a small Reeborg-style subset: <code>move()</code>, <code>turn_left()</code>,
+          <code>front_is_clear()</code>, <code>right_is_clear()</code>, <code>wall_in_front()</code>,
+          <code>wall_on_right()</code>, <code>at_goal()</code>, <code>is_facing_north()</code>,
+          <code>def</code>, <code>if</code>, <code>elif</code>, <code>else</code>, <code>while</code>,
+          <code>not</code>, <code>and</code>, <code>or</code>, and simple <code>repeat 3:</code> loops.
+        </p>
+        <p class="small-note">It is meant for your own practice code, not for running code copied from unknown sources.</p>
+      </details>
+
+      <details class="help-box converted-box">
+        <summary>Show converted JavaScript</summary>
+        <pre id="convertedCode">Press Play code to see the converted JavaScript.</pre>
+      </details>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
