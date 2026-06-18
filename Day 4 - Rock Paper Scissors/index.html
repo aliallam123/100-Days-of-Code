@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon RPS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="eyebrow">AI Arena</p>
+      <h1>Rock Paper Scissors</h1>
+      <p class="subtitle">Choose your weapon. Beat the machine.</p>
+
+      <div class="choices">
+        <button onclick="playGame(0)">🪨<span>Rock</span></button>
+        <button onclick="playGame(1)">📄<span>Paper</span></button>
+        <button onclick="playGame(2)">✂️<span>Scissors</span></button>
+      </div>
+    </section>
+
+    <section class="battle-card">
+      <div class="player-panel">
+        <h2>You</h2>
+        <div id="player-icon" class="icon">?</div>
+        <p id="player-name">Waiting...</p>
+      </div>
+
+      <div class="vs">VS</div>
+
+      <div class="player-panel">
+        <h2>Computer</h2>
+        <div id="computer-icon" class="icon">?</div>
+        <p id="computer-name">Waiting...</p>
+      </div>
+    </section>
+
+    <h2 id="result-message" class="result">Make your move</h2>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
