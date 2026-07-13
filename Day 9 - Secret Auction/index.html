@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secret Auction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+  <div class="orb orb-three"></div>
+
+  <main class="app-shell">
+    <section class="hero-panel">
+      <p class="eyebrow">Private Collection // Invite Only</p>
+      <h1>Secret Auction</h1>
+      <p class="subtitle">Place hidden bids on rare luxury items. When the final bidder leaves, reveal the winner.</p>
+
+      <div class="live-stats">
+        <div>
+          <span id="bidCount">0</span>
+          <small>Bids Placed</small>
+        </div>
+        <div>
+          <span id="itemCount">1/4</span>
+          <small>Current Lot</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="auction-card">
+      <div class="vault-glow"></div>
+
+      <div class="lot-display">
+        <button class="nav-btn" id="prevItem" aria-label="Previous item">‹</button>
+
+        <div class="item-frame">
+          <img id="itemImage" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80" alt="Diamond necklace" />
+          <div class="scan-line"></div>
+        </div>
+
+        <button class="nav-btn" id="nextItem" aria-label="Next item">›</button>
+      </div>
+
+      <div class="lot-info">
+        <p class="lot-number" id="lotNumber">Lot 01</p>
+        <h2 id="itemName">Midnight Diamond Necklace</h2>
+        <p id="itemDescription">A rare diamond necklace displayed under locked private viewing.</p>
+      </div>
+
+      <form id="bidForm" class="bid-form">
+        <label for="bidderName">Bidder Name</label>
+        <input id="bidderName" type="text" placeholder="e.g. Ali" autocomplete="off" required />
+
+        <label for="bidAmount">Secret Bid</label>
+        <div class="money-input">
+          <span>£</span>
+          <input id="bidAmount" type="number" min="1" placeholder="5000" required />
+        </div>
+
+        <button type="submit" class="primary-btn">Lock In Bid</button>
+      </form>
+
+      <div class="actions">
+        <button id="newBidder" class="secondary-btn">Next Bidder</button>
+        <button id="revealWinner" class="danger-btn">No More Bidders</button>
+      </div>
+
+      <section id="resultPanel" class="result-panel hidden">
+        <p>Winning Bidder</p>
+        <h3 id="winnerName">---</h3>
+        <span id="winnerBid">---</span>
+      </section>
+    </section>
+  </main>
+
+  <aside class="bid-ledger">
+    <h3>Encrypted Ledger</h3>
+    <p>Names are hidden until the final reveal.</p>
+    <ul id="ledgerList"></ul>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
