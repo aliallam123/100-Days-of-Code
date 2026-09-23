@@ -25,3 +25,5 @@ operations = {
     "*": multiply,
     "/": divide,
 }
+
+print(operations["*"](4, 8))
