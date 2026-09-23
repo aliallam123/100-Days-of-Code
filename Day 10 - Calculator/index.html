@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 10 - Modular Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <header class="top-nav">
+    <a href="../index.html" class="nav-back">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      <span>Back to Projects</span>
+    </a>
+    <div class="badge">Day 10 • 100 Days of Code</div>
+  </header>
+
+  <main class="container">
+    <div class="calculator-card">
+      <div class="calc-header">
+        <div class="calc-title">
+          <span class="icon">🧮</span>
+          <div>
+            <h1>Modular Calculator</h1>
+            <p>Functions with Outputs & Chained Operations</p>
+          </div>
+        </div>
+        <div class="status-chip" id="statusChip">Ready</div>
+      </div>
+
+      <!-- Display -->
+      <div class="calc-display-wrap">
+        <div class="history-display" id="historyDisplay">&nbsp;</div>
+        <div class="main-display" id="mainDisplay">0</div>
+      </div>
+
+      <!-- Keypad -->
+      <div class="keypad">
+        <button type="button" class="btn btn-action" id="btnClear">AC</button>
+        <button type="button" class="btn btn-action" id="btnDelete" aria-label="Delete">⌫</button>
+        <button type="button" class="btn btn-action" id="btnToggleSign">±</button>
+        <button type="button" class="btn btn-operator" data-op="/">÷</button>
+
+        <button type="button" class="btn btn-number" data-num="7">7</button>
+        <button type="button" class="btn btn-number" data-num="8">8</button>
+        <button type="button" class="btn btn-number" data-num="9">9</button>
+        <button type="button" class="btn btn-operator" data-op="*">×</button>
+
+        <button type="button" class="btn btn-number" data-num="4">4</button>
+        <button type="button" class="btn btn-number" data-num="5">5</button>
+        <button type="button" class="btn btn-number" data-num="6">6</button>
+        <button type="button" class="btn btn-operator" data-op="-">−</button>
+
+        <button type="button" class="btn btn-number" data-num="1">1</button>
+        <button type="button" class="btn btn-number" data-num="2">2</button>
+        <button type="button" class="btn btn-number" data-num="3">3</button>
+        <button type="button" class="btn btn-operator" data-op="+">+</button>
+
+        <button type="button" class="btn btn-number btn-zero" data-num="0">0</button>
+        <button type="button" class="btn btn-number" id="btnDot">.</button>
+        <button type="button" class="btn btn-equals" id="btnEquals">=</button>
+      </div>
+
+      <!-- History toggle / log -->
+      <div class="history-panel">
+        <div class="history-title">
+          <span>Recent Computations</span>
+          <button type="button" class="btn-clear-history" id="btnClearHistory">Clear Log</button>
+        </div>
+        <ul class="history-list" id="historyList">
+          <li class="empty-state">No calculations yet</li>
+        </ul>
+      </div>
+
+      <!-- Logic explanation accordion / banner -->
+      <div class="python-logic-card">
+        <div class="logic-header">
+          <span class="code-tag">Python Architecture</span>
+          <span class="yu-tag">Angela Yu Concept</span>
+        </div>
+        <p class="logic-text">
+          Powered by first-class functions mapped inside a dictionary dispatch table:
+          <code>operations = {"+": add, "-": subtract, "*": multiply, "/": divide}</code>.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

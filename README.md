@@ -17,6 +17,7 @@ Welcome to my **100 Days of Code** journey! This repository contains both the Py
 | 5 | **Password Generator** | A secure password generator with customizable length, symbols, and numbers. | Python / JS | [View Code](./Day%205%20-%20Password%20Generator/) | [Play Live 🎮](https://aliallam123.github.io/100-Days-of-Code/Day%205%20-%20Password%20Generator/) |
 | 6 | **Escape the Maze** | A logic-based pathfinding game/maze solver. | Python / JS | [View Code](./Day%206%20-%20Escape%20the%20Maze/) | [Play Live 🎮](https://aliallam123.github.io/100-Days-of-Code/Day%206%20-%20Escape%20the%20Maze/) |
 | 9 | **Secret Auction** | Place hidden bids on rare luxury items. When the final bidder leaves, reveal the winner. | Python / JS | [View Code](./Day%209%20-%20Secret%20Auction/) | [Play Live 🎮](https://aliallam123.github.io/100-Days-of-Code/Day%209%20-%20Secret%20Auction/) |
+| 10 | **Calculator** | A modular arithmetic calculator supporting chained calculations and history. | Python / JS | [View Code](./Day%2010%20-%20Calculator/) | [Play Live 🎮](https://aliallam123.github.io/100-Days-of-Code/Day%2010%20-%20Calculator/) |
 
 *More days will be added as I progress through the challenge!*
 
