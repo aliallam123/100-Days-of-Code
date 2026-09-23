@@ -26,4 +26,6 @@ operations = {
     "/": divide,
 }
 
-print(operations["*"](4, 8))
+num1 = input("What's the first number?: ")
+operator = input("Pick an operation: ")
+num2 = input("What's the second number?: ")
