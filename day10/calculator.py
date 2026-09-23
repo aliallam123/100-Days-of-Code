@@ -26,6 +26,8 @@ operations = {
     "/": divide,
 }
 
-num1 = input("What's the first number?: ")
+num1 = float(input("What's the first number?: "))
 operator = input("Pick an operation: ")
-num2 = input("What's the second number?: ")
+num2 = float(input("What's the second number?: "))
+
+print(operations[operator](num1, num2))
